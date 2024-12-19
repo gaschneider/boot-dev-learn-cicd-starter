@@ -2,7 +2,6 @@ package auth
 
 import (
 	"errors"
-	"fmt"
 	"net/http"
 	"strings"
 )
@@ -20,6 +19,5 @@ func GetAPIKey(headers http.Header) (string, error) {
 		return "", errors.New("malformed authorization header")
 	}
 
-	return "", fmt.Errorf("forced error")
-	// return splitAuth[1], nil
+	return splitAuth[1], nil
 }
