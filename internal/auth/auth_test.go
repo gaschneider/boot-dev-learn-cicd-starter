@@ -13,7 +13,7 @@ func TestGetAPIKey(t *testing.T) {
 		wantErr   bool
 	}{
 		{
-			name: "Valid Bearer token",
+			name: "Valid ApiKey token",
 			headers: http.Header{
 				"Authorization": []string{"ApiKey valid_token"},
 			},
